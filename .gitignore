@@ -1,0 +1,65 @@
+# =================================================================
+# OMNISTAL PROJECT .GITIGNORE
+# =================================================================
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- Data & Artifacts (Privacy Protection) ---
+# We keep the folders but ignore the contents
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/models/*
+!data/models/.gitkeep
+
+# Ignore SQLite temporary files
+*.db-journal
+*.db-wal
+
+# --- Power BI ---
+# Ignore temporary and auto-recovery files
+*.pbix~
+*.pbit
+*.pbi
+
+# NOTE: If your .pbix file is larger than 50MB, uncomment the line below 
+# to keep it out of Git and use a download link in your README instead.
+# Omnistal_Dashboard.pbix 
+
+# --- IDE (VS Code, PyCharm) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.history/
+
+# --- Operating System ---
+.DS_Store
+Thumbs.db
+
+# --- Logs & Testing ---
+*.log
+.coverage
+htmlcov/
+.pytest_cache/
+
+# --- Environment & Secrets ---
+.env
